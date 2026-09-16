@@ -146,7 +146,13 @@ export type VideoCategory =
   | 'POS_6'
   | 'POS_7'
   | 'POS_8'
-  | 'POS_9';
+  | 'POS_9'
+  | 'BO_PHAP'
+  | 'DI_CHUYEN'
+  | 'CHEM_CAU'
+  | 'JUMP_SMASH'
+  | 'VE_TRAI_TAY'
+  | 'PHAN_TAT_THU';
 
 export interface TacticsVideo {
   id: string;

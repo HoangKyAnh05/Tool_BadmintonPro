@@ -10226,6 +10226,1175 @@ button,
   }
 }
 
+/* ==========================================================================
+   KID-FRIENDLY VIDEO CINEMA & AUTOMATED MINIMALIST UI (DÀNH CHO LỚP 1 & HỌC SINH)
+   ========================================================================== */
 
+.kid-friendly-home {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 16px 20px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
 
+/* 1. Kid Welcome Header */
+.kid-welcome-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.85));
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 20px;
+  padding: 20px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  gap: 24px;
+  flex-wrap: wrap;
+}
 
+.kid-welcome-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.kid-welcome-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.kid-welcome-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #f8fafc;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+}
+
+.kid-welcome-subtitle {
+  font-size: 0.94rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.kid-quick-stats-strip {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.kid-stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.kid-stat-chip strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+.kid-stat-chip small {
+  display: block;
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 2. Kid-friendly Cinema Section */
+.kid-friendly-cinema {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(10, 15, 29, 0.95) 100%);
+  border: 2px solid rgba(16, 185, 129, 0.25);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.08);
+}
+
+.cinema-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.cinema-header-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.cinema-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #10b981;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.cinema-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse 1.6s infinite;
+}
+
+.cinema-main-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #f8fafc;
+  line-height: 1.25;
+  font-family: var(--font-heading);
+}
+
+.cinema-tagline {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.cinema-progress-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 16px;
+}
+
+.cinema-badge-info .badge-val {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fcd34d;
+  margin-bottom: 6px;
+}
+
+.badge-bar-track {
+  width: 130px;
+  height: 8px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.badge-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #10b981);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* ==========================================================================
+   FEATURED INLINE STAGE (MÀN HÌNH XEM TRỰC TIẾP TRÊN TRANG)
+   ========================================================================== */
+.featured-stage-card {
+  background: #020617;
+  border: 2px solid #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.3s;
+}
+
+.featured-stage-card:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.stage-screen-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 540px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.stage-embed-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.stage-native-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000000;
+}
+
+/* Stage Bottom Controller Bar */
+.stage-control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  background: rgba(15, 23, 42, 0.98);
+  border-top: 1px solid rgba(51, 65, 85, 0.6);
+  flex-wrap: wrap;
+}
+
+.stage-video-details {
+  flex: 1;
+  min-width: 280px;
+}
+
+.stage-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.stage-level-badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stage-level-badge.lvl-Cơ\ bản {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.stage-level-badge.lvl-Trung\ cấp {
+  background: rgba(14, 165, 233, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.4);
+}
+
+.stage-level-badge.lvl-Nâng\ cao {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.stage-category-pill {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  background: rgba(51, 65, 85, 0.4);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.stage-video-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.35;
+  margin-bottom: 6px;
+  font-family: var(--font-heading);
+}
+
+.stage-coaching-tip {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.45;
+}
+
+.stage-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-stage-toggle-autonext {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  transition: all 0.2s;
+}
+
+.btn-stage-toggle-autonext.active {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: #10b981;
+  color: #34d399;
+}
+
+.stage-nav-btn-group {
+  display: flex;
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.btn-stage-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 13px;
+  background: rgba(30, 41, 59, 0.8);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  transition: background 0.2s;
+}
+
+.btn-stage-nav:hover {
+  background: rgba(51, 65, 85, 0.9);
+  color: #38bdf8;
+}
+
+.btn-stage-watched {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(71, 85, 105, 0.7);
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  transition: all 0.2s;
+}
+
+.btn-stage-watched:hover {
+  border-color: #10b981;
+  color: #34d399;
+}
+
+.btn-stage-watched.is-done {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: #10b981;
+  color: #34d399;
+}
+
+.btn-stage-fullscreen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 12px;
+  color: #e2e8f0;
+  transition: all 0.2s;
+}
+
+.btn-stage-fullscreen:hover {
+  background: #38bdf8;
+  color: #040711;
+}
+
+/* ==========================================================================
+   KID CATEGORY TABS STRIP (DỄ NHÌN CHO LỚP 1)
+   ========================================================================== */
+.kid-category-tabs-strip {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.kid-tabs-scrollable {
+  display: flex;
+  gap: 10px;
+  min-width: max-content;
+}
+
+.btn-kid-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 2px solid rgba(71, 85, 105, 0.4);
+  border-radius: 16px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+}
+
+.btn-kid-tab:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.6);
+  color: #f8fafc;
+}
+
+.btn-kid-tab.is-active {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 95, 70, 0.4));
+  border-color: #10b981;
+  color: #f8fafc;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+  transform: translateY(-2px);
+}
+
+.kid-tab-icon {
+  font-size: 1.25rem;
+}
+
+.kid-tab-count {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.btn-kid-tab.is-active .kid-tab-count {
+  color: #a7f3d0;
+}
+
+/* Subpills for 9 Positions */
+.kid-subpills-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 10px;
+  flex-wrap: wrap;
+}
+
+.btn-subpill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  transition: all 0.2s;
+}
+
+.btn-subpill:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.btn-subpill.active {
+  background: #0284c7;
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+}
+
+.pill-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* Filters & Search Toolbar */
+.kid-filters-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  border-radius: 16px;
+}
+
+.kid-level-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-hint-lbl {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-right: 4px;
+}
+
+.btn-kid-lvl-pill {
+  padding: 7px 14px;
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #94a3b8;
+  transition: all 0.2s;
+}
+
+.btn-kid-lvl-pill:hover {
+  color: #f8fafc;
+}
+
+.btn-kid-lvl-pill.active {
+  background: #10b981;
+  border-color: #34d399;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
+}
+
+.btn-kid-lvl-pill.lvl-Cơ\ bản.active {
+  background: #059669;
+}
+
+.btn-kid-lvl-pill.lvl-Trung\ cấp.active {
+  background: #0284c7;
+}
+
+.btn-kid-lvl-pill.lvl-Nâng\ cao.active {
+  background: #dc2626;
+}
+
+.kid-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  flex: 1;
+  max-width: 440px;
+}
+
+.kid-search-icon {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.kid-search-input {
+  width: 100%;
+  padding: 10px 36px 10px 42px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 12px;
+  color: #f8fafc;
+  font-size: 0.88rem;
+  transition: all 0.2s;
+}
+
+.kid-search-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+.kid-search-clear {
+  position: absolute;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(71, 85, 105, 0.5);
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   KID VIDEO GRID (CÁC THẺ BÀI HỌC VUI NHỘN, BẤM LÀ XEM NGAY)
+   ========================================================================== */
+.kid-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.kid-video-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 2px solid rgba(51, 65, 85, 0.6);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.kid-video-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.kid-video-card.is-currently-playing {
+  border-color: #10b981;
+  background: rgba(6, 78, 59, 0.2);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.35);
+}
+
+.kid-video-card.is-completed {
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.kid-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #020617;
+  overflow: hidden;
+}
+
+.kid-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.kid-video-card:hover .kid-thumb-img {
+  transform: scale(1.06);
+}
+
+.kid-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.kid-video-card:hover .kid-play-overlay {
+  opacity: 1;
+  background: rgba(2, 6, 23, 0.15);
+}
+
+.kid-play-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #0284c7);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.5);
+  transition: transform 0.2s;
+}
+
+.kid-video-card:hover .kid-play-circle {
+  transform: scale(1.15);
+}
+
+.kid-thumb-badge-top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.kid-lvl-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.kid-lvl-tag.lvl-Cơ\ bản {
+  background: rgba(16, 185, 129, 0.9);
+  color: #ffffff;
+}
+
+.kid-lvl-tag.lvl-Trung\ cấp {
+  background: rgba(2, 132, 199, 0.9);
+  color: #ffffff;
+}
+
+.kid-lvl-tag.lvl-Nâng\ cao {
+  background: rgba(225, 29, 72, 0.9);
+  color: #ffffff;
+}
+
+.kid-done-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #10b981;
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #34d399;
+}
+
+.kid-playing-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(16, 185, 129, 0.95);
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.playing-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: pulse 1s infinite;
+}
+
+.kid-card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.kid-card-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.35;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: var(--font-heading);
+}
+
+.kid-card-subtitle {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kid-card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(51, 65, 85, 0.4);
+}
+
+.kid-watch-btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #38bdf8;
+  transition: color 0.2s;
+}
+
+.kid-video-card:hover .kid-watch-btn-text {
+  color: #34d399;
+}
+
+.kid-toggle-star {
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(30, 41, 59, 0.6);
+  transition: background 0.2s;
+}
+
+.kid-toggle-star:hover {
+  background: rgba(51, 65, 85, 0.8);
+}
+
+/* Empty State */
+.kid-empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px dashed rgba(71, 85, 105, 0.5);
+  border-radius: 20px;
+}
+
+.kid-empty-state h3 {
+  font-size: 1.3rem;
+  color: #f8fafc;
+  margin: 14px 0 6px;
+}
+
+.kid-empty-state p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 18px;
+}
+
+.btn-kid-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #0284c7;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 800;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+}
+
+/* Coach Settings Accordion */
+.coach-settings-accordion {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(51, 65, 85, 0.6);
+}
+
+.btn-coach-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(71, 85, 105, 0.4);
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: all 0.2s;
+}
+
+.btn-coach-toggle:hover {
+  color: #f8fafc;
+  border-color: #38bdf8;
+}
+
+.coach-tools-panel {
+  margin-top: 14px;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 14px;
+}
+
+.coach-tools-desc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.coach-buttons-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-coach-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.btn-coach-item:hover {
+  background: rgba(51, 65, 85, 0.9);
+  color: #38bdf8;
+}
+
+/* ==========================================================================
+   KID QUICKSTART CTA BANNER (1 BẤM TẬP NGAY CÙNG HLV)
+   ========================================================================== */
+.kid-quickstart-cta-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  background: linear-gradient(135deg, #064e3b 0%, #0f766e 50%, #0369a1 100%);
+  border: 2px solid #34d399;
+  border-radius: 24px;
+  padding: 28px 36px;
+  box-shadow: 0 16px 40px rgba(6, 78, 59, 0.45);
+  flex-wrap: wrap;
+}
+
+.cta-banner-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.cta-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #fef08a;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.cta-banner-left h2 {
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  font-family: var(--font-heading);
+}
+
+.cta-banner-left p {
+  font-size: 0.96rem;
+  color: #e6fffa;
+  margin-bottom: 18px;
+  max-width: 580px;
+  line-height: 1.45;
+}
+
+.cta-exp-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.exp-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ccfbf1;
+}
+
+.btn-exp-chip {
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.btn-exp-chip:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-exp-chip.active-beginner {
+  background: #10b981;
+  border-color: #a7f3d0;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.btn-exp-chip.active-advanced {
+  background: #f59e0b;
+  border-color: #fde68a;
+  color: #040711;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.cta-banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-kid-mega-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  color: #ffffff;
+  border: 3px solid #fef08a;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.45), 0 0 20px rgba(245, 158, 11, 0.3);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-kid-mega-start:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 40px rgba(239, 68, 68, 0.6), 0 0 30px rgba(245, 158, 11, 0.5);
+}
+
+.start-text-col {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mega-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  font-family: var(--font-heading);
+}
+
+.mega-subtitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fef08a;
+}
+
+.btn-kid-record-cam {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.btn-kid-record-cam:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Mode cards adjustments */
+.kid-friendly-modes .section-eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #10b981;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.kid-mode-card {
+  border-radius: 20px !important;
+  border-width: 2px !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.kid-mode-card:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+}
+
+.card-emoji {
+  font-size: 1.25rem;
+  margin-right: 4px;
+}
+
+.kid-court-banner {
+  border-radius: 20px !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 8s linear infinite;
+}
+
+@keyframes bounceSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-bounce-soft {
+  animation: bounceSoft 2s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .kid-friendly-home {
+    padding: 12px 10px 40px;
+    gap: 20px;
+  }
+  
+  .kid-welcome-title {
+    font-size: 1.45rem;
+  }
+  
+  .cinema-main-title {
+    font-size: 1.35rem;
+  }
+  
+  .kid-quickstart-cta-banner {
+    padding: 20px 18px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-kid-mega-start {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 20px;
+  }
+
+  .stage-control-bar {
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stage-action-buttons {
+    justify-content: space-between;
+  }
+}
