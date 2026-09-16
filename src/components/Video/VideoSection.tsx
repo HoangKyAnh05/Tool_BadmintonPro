@@ -99,7 +99,9 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ initialLevel }) => {
   const [videoOverrides, setVideoOverrides] = useState<Record<string, Partial<TacticsVideo>>>(() => storageService.loadVideoOverrides());
 
   const stagePlayerRef = useRef<HTMLDivElement>(null);
+  const stageCardRef = useRef<HTMLDivElement>(null);
   const videoElemRef = useRef<HTMLVideoElement>(null);
+  const [highlightPulse, setHighlightPulse] = useState<boolean>(false);
 
   const refreshWatched = () => setWatchedIds(storageService.loadWatchedVideos());
   const refreshCustom = () => setCustomVideos(storageService.loadCustomVideos());
@@ -166,12 +168,25 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ initialLevel }) => {
     });
   }, [allVideos, activeGroup, activeCorner, activeMatch, levelFilter, searchQuery]);
 
-  // Handle video selection: set featured player and smoothly scroll to it
+  // Handle video selection: set featured player and smoothly scroll directly to player screen
   const handleSelectVideo = (v: TacticsVideo, scrollToStage = true) => {
     setCurrentVideo(v);
     setIsPlayingStage(true);
-    if (scrollToStage && stagePlayerRef.current) {
-      stagePlayerRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    setHighlightPulse(true);
+    setTimeout(() => setHighlightPulse(false), 1400);
+
+    if (scrollToStage) {
+      setTimeout(() => {
+        if (stageCardRef.current) {
+          const navbarHeight = 85;
+          const elementPosition = stageCardRef.current.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+          window.scrollTo({
+            top: Math.max(0, offsetPosition),
+            behavior: 'smooth'
+          });
+        }
+      }, 30);
     }
   };
 
@@ -265,7 +280,11 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ initialLevel }) => {
       {/* ============================================================ */}
       {/* 1. FEATURED INLINE STAGE - PHÁT VIDEO TRỰC TIẾP TRÊN MÀN HÌNH */}
       {/* ============================================================ */}
-      <div className="featured-stage-card animate-scale-up">
+      <div 
+        ref={stageCardRef} 
+        id="featured-video-stage" 
+        className={`featured-stage-card animate-scale-up ${highlightPulse ? 'stage-highlight-pulse' : ''}`}
+      >
         <div className="stage-screen-wrapper">
           {stageYtId ? (
             <iframe

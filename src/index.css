@@ -11398,3 +11398,25 @@ button,
     justify-content: space-between;
   }
 }
+
+/* Highlight pulse when user clicks any video card below */
+@keyframes stageHighlightPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+    border-color: #10b981;
+  }
+  35% {
+    box-shadow: 0 0 45px rgba(56, 189, 248, 0.85), 0 0 20px rgba(16, 185, 129, 0.6);
+    border-color: #38bdf8;
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+    border-color: #1e293b;
+    transform: scale(1);
+  }
+}
+
+.stage-highlight-pulse {
+  animation: stageHighlightPulse 1.4s ease-out;
+}
